@@ -1,0 +1,131 @@
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #1e1e2f; /* Deep navy blue background for modern look */
+    overflow: auto;
+    color: #d3d3e7; /* Soft, muted text color for better readability */
+}
+
+/* Top bar styles */
+#top-bar {
+    width: 100%;
+    background-color: #2e3b47; /* Subtle dark grayish blue for a professional look */
+    color: #d3d3e7; /* Soft muted text color for readability */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 24px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Chat container styles */
+#chat-container {
+    width: 85%;
+    max-width: 900px;
+    min-width: 600px;
+    background-color: #2a2d3e; /* Slightly lighter background for contrast */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Elegant shadow */
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    overflow: hidden;
+    margin-top: 90px; /* Allows space below the fixed top bar */
+}
+
+/* Messages container */
+#messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: #4a90e2 #2a2d3e; /* Custom scrollbar colors */
+}
+
+#messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+#messages::-webkit-scrollbar-thumb {
+    background-color: #4a90e2; /* Thumb color */
+    border-radius: 4px;
+}
+
+/* Input text field styles */
+#user-input {
+    width: 95%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #4a90e2; /* Harmonized border color */
+    border-radius: 8px;
+    resize: none;
+    min-height: 50px;
+    background-color: #212335; /* Darker background for input */
+    color: #ffffff;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+/* Focused input field */
+#user-input:focus {
+    border-color: #6eb5ff; /* Subtle highlight */
+    outline: none;
+}
+
+/* Send button styles */
+#send-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #4a90e2; /* Matches top bar */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    align-self: flex-end;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover and active effects for the send button */
+#send-btn:hover {
+    background-color: #6eb5ff;
+}
+
+#send-btn:active {
+    transform: scale(0.95);
+}
+
+/* Disabled state for send button */
+#send-btn:disabled {
+    background-color: #7f8ca3;
+    cursor: not-allowed;
+}
+
+/* Message styles */
+.message {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.5; /* Improves readability */
+}
+
+/* Bot message style */
+.bot-message {
+    color: #8dd8f8; /* Soft teal for bot messages */
+}
+
+/* User message style */
+.user-message {
+    color: #b4f8c8; /* Gentle mint green for user messages */
+    text-align: right;
+}
